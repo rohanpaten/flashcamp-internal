@@ -1,0 +1,464 @@
+INFO:     Will watch for changes in these directories: ['/Users/sf/Desktop/FLASH']
+INFO:     Uvicorn running on http://0.0.0.0:8002 (Press CTRL+C to quit)
+INFO:     Started reloader process [91698] using StatReload
+/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:
+* 'schema_extra' has been renamed to 'json_schema_extra'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [91701]
+INFO:     Waiting for application startup.
+2025-05-18 01:13:34,998 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-05-18 01:13:34,998 [INFO] [sqlalchemy.engine.Engine] [-] BEGIN (implicit)
+2025-05-18 01:13:34,998 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("startups")
+2025-05-18 01:13:34,998 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("startups")
+2025-05-18 01:13:34,998 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 01:13:34,998 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 01:13:34,999 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("analyses")
+2025-05-18 01:13:34,999 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("analyses")
+2025-05-18 01:13:34,999 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 01:13:34,999 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 01:13:34,999 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("users")
+2025-05-18 01:13:34,999 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("users")
+2025-05-18 01:13:34,999 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 01:13:34,999 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 01:13:35,000 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("reports")
+2025-05-18 01:13:35,000 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("reports")
+2025-05-18 01:13:35,000 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 01:13:35,000 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 01:13:35,000 INFO sqlalchemy.engine.Engine COMMIT
+2025-05-18 01:13:35,000 [INFO] [sqlalchemy.engine.Engine] [-] COMMIT
+2025-05-18 01:13:35,001 [INFO] [flashcamp.backend.database] [-] Database tables created successfully
+2025-05-18 01:13:35,001 [INFO] [flashcamp.backend.app.engines.ml] [-] Loading ML models from disk...
+2025-05-18 01:13:35,001 [WARNING] [flashcamp.backend.app.engines.ml] [-] Main model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/flashdna_main_v2.0.pkl, using random predictions
+2025-05-18 01:13:35,001 [WARNING] [flashcamp.backend.app.engines.ml] [-] Capital model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/capital_model_v2.0.pkl, using random predictions
+2025-05-18 01:13:35,001 [WARNING] [flashcamp.backend.app.engines.ml] [-] Advantage model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/advantage_model_v2.0.pkl, using random predictions
+2025-05-18 01:13:35,001 [WARNING] [flashcamp.backend.app.engines.ml] [-] Market model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/market_model_v2.0.pkl, using random predictions
+2025-05-18 01:13:35,001 [WARNING] [flashcamp.backend.app.engines.ml] [-] People model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/people_model_v2.0.pkl, using random predictions
+2025-05-18 01:13:35,001 [INFO] [flashcamp.backend.app.engines.ml] [-] All models loaded successfully
+2025-05-18 01:13:35,001 [INFO] [flashcamp.backend.main] [-] FlashDNA API initialized in production mode
+INFO:     Application startup complete.
+INFO:     127.0.0.1:57318 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  StatReload detected changes in 'flashcamp/backend/app/engines/ml.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [91701]
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "/Users/sf/.pyenv/versions/3.11.7/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/Users/sf/.pyenv/versions/3.11.7/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sf/.pyenv/versions/3.11.7/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/sf/.pyenv/versions/3.11.7/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sf/.pyenv/versions/3.11.7/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sf/.pyenv/versions/3.11.7/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/sf/Desktop/FLASH/flashcamp/backend/main.py", line 10, in <module>
+    from .app.routes import router as api_router
+  File "/Users/sf/Desktop/FLASH/flashcamp/backend/app/__init__.py", line 14, in <module>
+    from .engines import (
+  File "/Users/sf/Desktop/FLASH/flashcamp/backend/app/engines/__init__.py", line 6, in <module>
+    from .ml import (
+  File "/Users/sf/Desktop/FLASH/flashcamp/backend/app/engines/ml.py", line 102
+    else: 
+IndentationError: unexpected indent
+WARNING:  StatReload detected changes in 'flashcamp/backend/app/routes/prediction.py'. Reloading...
+Process SpawnProcess-3:
+Traceback (most recent call last):
+  File "/Users/sf/.pyenv/versions/3.11.7/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/Users/sf/.pyenv/versions/3.11.7/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sf/.pyenv/versions/3.11.7/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/sf/.pyenv/versions/3.11.7/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sf/.pyenv/versions/3.11.7/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sf/.pyenv/versions/3.11.7/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/sf/Desktop/FLASH/flashcamp/backend/main.py", line 10, in <module>
+    from .app.routes import router as api_router
+  File "/Users/sf/Desktop/FLASH/flashcamp/backend/app/__init__.py", line 14, in <module>
+    from .engines import (
+  File "/Users/sf/Desktop/FLASH/flashcamp/backend/app/engines/__init__.py", line 6, in <module>
+    from .ml import (
+  File "/Users/sf/Desktop/FLASH/flashcamp/backend/app/engines/ml.py", line 102
+    else: 
+IndentationError: unexpected indent
+WARNING:  StatReload detected changes in 'flashcamp/backend/app/engines/ml.py'. Reloading...
+/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:
+* 'schema_extra' has been renamed to 'json_schema_extra'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [10256]
+INFO:     Waiting for application startup.
+2025-05-18 12:11:54,604 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-05-18 12:11:54,604 [INFO] [sqlalchemy.engine.Engine] [-] BEGIN (implicit)
+2025-05-18 12:11:54,604 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("startups")
+2025-05-18 12:11:54,604 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("startups")
+2025-05-18 12:11:54,604 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:11:54,604 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:11:54,605 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("analyses")
+2025-05-18 12:11:54,605 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("analyses")
+2025-05-18 12:11:54,605 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:11:54,605 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:11:54,605 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("users")
+2025-05-18 12:11:54,605 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("users")
+2025-05-18 12:11:54,605 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:11:54,605 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:11:54,606 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("reports")
+2025-05-18 12:11:54,606 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("reports")
+2025-05-18 12:11:54,606 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:11:54,606 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:11:54,606 INFO sqlalchemy.engine.Engine COMMIT
+2025-05-18 12:11:54,606 [INFO] [sqlalchemy.engine.Engine] [-] COMMIT
+2025-05-18 12:11:54,606 [INFO] [flashcamp.backend.database] [-] Database tables created successfully
+2025-05-18 12:11:54,606 [INFO] [flashcamp.backend.app.engines.ml] [-] Loading ML models from disk...
+2025-05-18 12:11:54,606 [WARNING] [flashcamp.backend.app.engines.ml] [-] Main model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/flashdna_main_v2.0.pkl, using random predictions
+2025-05-18 12:11:54,607 [WARNING] [flashcamp.backend.app.engines.ml] [-] Capital model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/capital_model_v2.0.pkl, using random predictions
+2025-05-18 12:11:54,607 [WARNING] [flashcamp.backend.app.engines.ml] [-] Advantage model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/advantage_model_v2.0.pkl, using random predictions
+2025-05-18 12:11:54,607 [WARNING] [flashcamp.backend.app.engines.ml] [-] Market model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/market_model_v2.0.pkl, using random predictions
+2025-05-18 12:11:54,607 [WARNING] [flashcamp.backend.app.engines.ml] [-] People model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/people_model_v2.0.pkl, using random predictions
+2025-05-18 12:11:54,607 [INFO] [flashcamp.backend.app.engines.ml] [-] All models loaded successfully
+2025-05-18 12:11:54,607 [INFO] [flashcamp.backend.main] [-] FlashDNA API initialized in production mode
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'flashcamp/tests/test_hierarchical_model.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10256]
+/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:
+* 'schema_extra' has been renamed to 'json_schema_extra'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [10267]
+INFO:     Waiting for application startup.
+2025-05-18 12:12:04,859 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-05-18 12:12:04,859 [INFO] [sqlalchemy.engine.Engine] [-] BEGIN (implicit)
+2025-05-18 12:12:04,860 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("startups")
+2025-05-18 12:12:04,860 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("startups")
+2025-05-18 12:12:04,860 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:12:04,860 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:12:04,860 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("analyses")
+2025-05-18 12:12:04,860 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("analyses")
+2025-05-18 12:12:04,860 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:12:04,860 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:12:04,861 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("users")
+2025-05-18 12:12:04,861 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("users")
+2025-05-18 12:12:04,861 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:12:04,861 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:12:04,861 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("reports")
+2025-05-18 12:12:04,861 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("reports")
+2025-05-18 12:12:04,861 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:12:04,861 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:12:04,862 INFO sqlalchemy.engine.Engine COMMIT
+2025-05-18 12:12:04,862 [INFO] [sqlalchemy.engine.Engine] [-] COMMIT
+2025-05-18 12:12:04,862 [INFO] [flashcamp.backend.database] [-] Database tables created successfully
+2025-05-18 12:12:04,862 [INFO] [flashcamp.backend.app.engines.ml] [-] Loading ML models from disk...
+2025-05-18 12:12:04,862 [WARNING] [flashcamp.backend.app.engines.ml] [-] Main model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/flashdna_main_v2.0.pkl, using random predictions
+2025-05-18 12:12:04,862 [WARNING] [flashcamp.backend.app.engines.ml] [-] Capital model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/capital_model_v2.0.pkl, using random predictions
+2025-05-18 12:12:04,862 [WARNING] [flashcamp.backend.app.engines.ml] [-] Advantage model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/advantage_model_v2.0.pkl, using random predictions
+2025-05-18 12:12:04,862 [WARNING] [flashcamp.backend.app.engines.ml] [-] Market model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/market_model_v2.0.pkl, using random predictions
+2025-05-18 12:12:04,862 [WARNING] [flashcamp.backend.app.engines.ml] [-] People model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/people_model_v2.0.pkl, using random predictions
+2025-05-18 12:12:04,862 [INFO] [flashcamp.backend.app.engines.ml] [-] All models loaded successfully
+2025-05-18 12:12:04,862 [INFO] [flashcamp.backend.main] [-] FlashDNA API initialized in production mode
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'flashcamp/tests/test_hierarchical_model.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10267]
+/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:
+* 'schema_extra' has been renamed to 'json_schema_extra'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [10509]
+INFO:     Waiting for application startup.
+2025-05-18 12:14:08,945 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-05-18 12:14:08,945 [INFO] [sqlalchemy.engine.Engine] [-] BEGIN (implicit)
+2025-05-18 12:14:08,946 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("startups")
+2025-05-18 12:14:08,946 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("startups")
+2025-05-18 12:14:08,946 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:14:08,946 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:14:08,946 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("analyses")
+2025-05-18 12:14:08,946 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("analyses")
+2025-05-18 12:14:08,947 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:14:08,947 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:14:08,947 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("users")
+2025-05-18 12:14:08,947 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("users")
+2025-05-18 12:14:08,947 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:14:08,947 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:14:08,947 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("reports")
+2025-05-18 12:14:08,947 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("reports")
+2025-05-18 12:14:08,947 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:14:08,947 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:14:08,948 INFO sqlalchemy.engine.Engine COMMIT
+2025-05-18 12:14:08,948 [INFO] [sqlalchemy.engine.Engine] [-] COMMIT
+2025-05-18 12:14:08,948 [INFO] [flashcamp.backend.database] [-] Database tables created successfully
+2025-05-18 12:14:08,948 [INFO] [flashcamp.backend.app.engines.ml] [-] Loading ML models from disk...
+2025-05-18 12:14:08,948 [WARNING] [flashcamp.backend.app.engines.ml] [-] Main model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/flashdna_main_v2.0.pkl, using random predictions
+2025-05-18 12:14:08,948 [WARNING] [flashcamp.backend.app.engines.ml] [-] Capital model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/capital_model_v2.0.pkl, using random predictions
+2025-05-18 12:14:08,948 [WARNING] [flashcamp.backend.app.engines.ml] [-] Advantage model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/advantage_model_v2.0.pkl, using random predictions
+2025-05-18 12:14:08,948 [WARNING] [flashcamp.backend.app.engines.ml] [-] Market model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/market_model_v2.0.pkl, using random predictions
+2025-05-18 12:14:08,948 [WARNING] [flashcamp.backend.app.engines.ml] [-] People model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/people_model_v2.0.pkl, using random predictions
+2025-05-18 12:14:08,949 [INFO] [flashcamp.backend.app.engines.ml] [-] All models loaded successfully
+2025-05-18 12:14:08,949 [INFO] [flashcamp.backend.main] [-] FlashDNA API initialized in production mode
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'flashcamp/tests/test_hierarchical_model.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10509]
+/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:
+* 'schema_extra' has been renamed to 'json_schema_extra'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [10561]
+INFO:     Waiting for application startup.
+2025-05-18 12:14:41,388 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-05-18 12:14:41,388 [INFO] [sqlalchemy.engine.Engine] [-] BEGIN (implicit)
+2025-05-18 12:14:41,388 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("startups")
+2025-05-18 12:14:41,388 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("startups")
+2025-05-18 12:14:41,388 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:14:41,388 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:14:41,389 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("analyses")
+2025-05-18 12:14:41,389 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("analyses")
+2025-05-18 12:14:41,389 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:14:41,389 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:14:41,390 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("users")
+2025-05-18 12:14:41,390 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("users")
+2025-05-18 12:14:41,390 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:14:41,390 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:14:41,390 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("reports")
+2025-05-18 12:14:41,390 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("reports")
+2025-05-18 12:14:41,390 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:14:41,390 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:14:41,391 INFO sqlalchemy.engine.Engine COMMIT
+2025-05-18 12:14:41,391 [INFO] [sqlalchemy.engine.Engine] [-] COMMIT
+2025-05-18 12:14:41,391 [INFO] [flashcamp.backend.database] [-] Database tables created successfully
+2025-05-18 12:14:41,391 [INFO] [flashcamp.backend.app.engines.ml] [-] Loading ML models from disk...
+2025-05-18 12:14:41,391 [WARNING] [flashcamp.backend.app.engines.ml] [-] Main model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/flashdna_main_v2.0.pkl, using random predictions
+2025-05-18 12:14:41,391 [WARNING] [flashcamp.backend.app.engines.ml] [-] Capital model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/capital_model_v2.0.pkl, using random predictions
+2025-05-18 12:14:41,391 [WARNING] [flashcamp.backend.app.engines.ml] [-] Advantage model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/advantage_model_v2.0.pkl, using random predictions
+2025-05-18 12:14:41,391 [WARNING] [flashcamp.backend.app.engines.ml] [-] Market model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/market_model_v2.0.pkl, using random predictions
+2025-05-18 12:14:41,391 [WARNING] [flashcamp.backend.app.engines.ml] [-] People model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/people_model_v2.0.pkl, using random predictions
+2025-05-18 12:14:41,391 [INFO] [flashcamp.backend.app.engines.ml] [-] All models loaded successfully
+2025-05-18 12:14:41,391 [INFO] [flashcamp.backend.main] [-] FlashDNA API initialized in production mode
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'flashcamp/tests/test_hierarchical_model.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10561]
+/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:
+* 'schema_extra' has been renamed to 'json_schema_extra'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [10579]
+INFO:     Waiting for application startup.
+2025-05-18 12:14:56,529 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-05-18 12:14:56,529 [INFO] [sqlalchemy.engine.Engine] [-] BEGIN (implicit)
+2025-05-18 12:14:56,529 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("startups")
+2025-05-18 12:14:56,529 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("startups")
+2025-05-18 12:14:56,529 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:14:56,529 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:14:56,530 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("analyses")
+2025-05-18 12:14:56,530 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("analyses")
+2025-05-18 12:14:56,530 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:14:56,530 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:14:56,531 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("users")
+2025-05-18 12:14:56,531 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("users")
+2025-05-18 12:14:56,531 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:14:56,531 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:14:56,531 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("reports")
+2025-05-18 12:14:56,531 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("reports")
+2025-05-18 12:14:56,531 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:14:56,531 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:14:56,532 INFO sqlalchemy.engine.Engine COMMIT
+2025-05-18 12:14:56,532 [INFO] [sqlalchemy.engine.Engine] [-] COMMIT
+2025-05-18 12:14:56,532 [INFO] [flashcamp.backend.database] [-] Database tables created successfully
+2025-05-18 12:14:56,532 [INFO] [flashcamp.backend.app.engines.ml] [-] Loading ML models from disk...
+2025-05-18 12:14:56,532 [WARNING] [flashcamp.backend.app.engines.ml] [-] Main model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/flashdna_main_v2.0.pkl, using random predictions
+2025-05-18 12:14:56,532 [WARNING] [flashcamp.backend.app.engines.ml] [-] Capital model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/capital_model_v2.0.pkl, using random predictions
+2025-05-18 12:14:56,532 [WARNING] [flashcamp.backend.app.engines.ml] [-] Advantage model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/advantage_model_v2.0.pkl, using random predictions
+2025-05-18 12:14:56,532 [WARNING] [flashcamp.backend.app.engines.ml] [-] Market model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/market_model_v2.0.pkl, using random predictions
+2025-05-18 12:14:56,532 [WARNING] [flashcamp.backend.app.engines.ml] [-] People model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/people_model_v2.0.pkl, using random predictions
+2025-05-18 12:14:56,532 [INFO] [flashcamp.backend.app.engines.ml] [-] All models loaded successfully
+2025-05-18 12:14:56,532 [INFO] [flashcamp.backend.main] [-] FlashDNA API initialized in production mode
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'flashcamp/tests/test_hierarchical_model.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10579]
+/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:
+* 'schema_extra' has been renamed to 'json_schema_extra'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [10805]
+INFO:     Waiting for application startup.
+2025-05-18 12:18:16,900 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-05-18 12:18:16,900 [INFO] [sqlalchemy.engine.Engine] [-] BEGIN (implicit)
+2025-05-18 12:18:16,900 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("startups")
+2025-05-18 12:18:16,900 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("startups")
+2025-05-18 12:18:16,901 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:18:16,901 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:18:16,901 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("analyses")
+2025-05-18 12:18:16,901 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("analyses")
+2025-05-18 12:18:16,901 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:18:16,901 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:18:16,902 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("users")
+2025-05-18 12:18:16,902 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("users")
+2025-05-18 12:18:16,902 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:18:16,902 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:18:16,902 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("reports")
+2025-05-18 12:18:16,902 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("reports")
+2025-05-18 12:18:16,902 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:18:16,902 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:18:16,903 INFO sqlalchemy.engine.Engine COMMIT
+2025-05-18 12:18:16,903 [INFO] [sqlalchemy.engine.Engine] [-] COMMIT
+2025-05-18 12:18:16,903 [INFO] [flashcamp.backend.database] [-] Database tables created successfully
+2025-05-18 12:18:16,903 [INFO] [flashcamp.backend.app.engines.ml] [-] Loading ML models from disk...
+2025-05-18 12:18:16,903 [WARNING] [flashcamp.backend.app.engines.ml] [-] Main model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/flashdna_main_v2.0.pkl, using random predictions
+2025-05-18 12:18:16,903 [WARNING] [flashcamp.backend.app.engines.ml] [-] Capital model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/capital_model_v2.0.pkl, using random predictions
+2025-05-18 12:18:16,903 [WARNING] [flashcamp.backend.app.engines.ml] [-] Advantage model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/advantage_model_v2.0.pkl, using random predictions
+2025-05-18 12:18:16,903 [WARNING] [flashcamp.backend.app.engines.ml] [-] Market model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/market_model_v2.0.pkl, using random predictions
+2025-05-18 12:18:16,903 [WARNING] [flashcamp.backend.app.engines.ml] [-] People model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/people_model_v2.0.pkl, using random predictions
+2025-05-18 12:18:16,903 [INFO] [flashcamp.backend.app.engines.ml] [-] All models loaded successfully
+2025-05-18 12:18:16,903 [INFO] [flashcamp.backend.main] [-] FlashDNA API initialized in production mode
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'flashcamp/tests/test_hierarchical_model.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10805]
+/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:
+* 'schema_extra' has been renamed to 'json_schema_extra'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [10850]
+INFO:     Waiting for application startup.
+2025-05-18 12:18:49,942 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-05-18 12:18:49,942 [INFO] [sqlalchemy.engine.Engine] [-] BEGIN (implicit)
+2025-05-18 12:18:49,943 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("startups")
+2025-05-18 12:18:49,943 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("startups")
+2025-05-18 12:18:49,943 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:18:49,943 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql]INFO:     127.0.0.1:63678 - "POST /api/prediction/predict HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63679 - "POST /api/prediction/recommendations HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63680 - "GET /api/prediction/model-info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63681 - "POST /api/prediction/visualization HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [91273]
+le_info("users")
+2025-05-18 12:18:49,944 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:18:49,944 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:18:49,944 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("reports")
+2025-05-18 12:18:49,944 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("reports")
+2025-05-18 12:18:49,944 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:18:49,944 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:18:49,945 INFO sqlalchemy.engine.Engine COMMIT
+2025-05-18 12:18:49,945 [INFO] [sqlalchemy.engine.Engine] [-] COMMIT
+2025-05-18 12:18:49,945 [INFO] [flashcamp.backend.database] [-] Database tables created successfully
+2025-05-18 12:18:49,945 [INFO] [flashcamp.backend.app.engines.ml] [-] Loading ML models from disk...
+2025-05-18 12:18:49,945 [WARNING] [flashcamp.backend.app.engines.ml] [-] Main model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/flashdna_main_v2.0.pkl, using random predictions
+2025-05-18 12:18:49,945 [WARNING] [flashcamp.backend.app.engines.ml] [-] Capital model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/capital_model_v2.0.pkl, using random predictions
+2025-05-18 12:18:49,945 [WARNING] [flashcamp.backend.app.engines.ml] [-] Advantage model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/advantage_model_v2.0.pkl, using random predictions
+2025-05-18 12:18:49,945 [WARNING] [flashcamp.backend.app.engines.ml] [-] Market model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/market_model_v2.0.pkl, using random predictions
+2025-05-18 12:18:49,945 [WARNING] [flashcamp.backend.app.engines.ml] [-] People model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/people_model_v2.0.pkl, using random predictions
+2025-05-18 12:18:49,945 [INFO] [flashcamp.backend.app.engines.ml] [-] All models loaded successfully
+2025-05-18 12:18:49,946 [INFO] [flashcamp.backend.main] [-] FlashDNA API initialized in production mode
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'flashcamp/backend/app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10850]
+/Users/sf/Desktop/FLASH/.venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:
+* 'schema_extra' has been renamed to 'json_schema_extra'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [11429]
+INFO:     Waiting for application startup.
+2025-05-18 12:25:48,883 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-05-18 12:25:48,883 [INFO] [sqlalchemy.engine.Engine] [-] BEGIN (implicit)
+2025-05-18 12:25:48,883 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("startups")
+2025-05-18 12:25:48,883 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("startups")
+2025-05-18 12:25:48,883 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:25:48,883 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:25:48,884 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("analyses")
+2025-05-18 12:25:48,884 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("analyses")
+2025-05-18 12:25:48,884 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:25:48,884 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:25:48,884 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("users")
+2025-05-18 12:25:48,884 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("users")
+2025-05-18 12:25:48,885 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:25:48,885 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:25:48,885 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("reports")
+2025-05-18 12:25:48,885 [INFO] [sqlalchemy.engine.Engine] [-] PRAGMA main.table_info("reports")
+2025-05-18 12:25:48,885 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-05-18 12:25:48,885 [INFO] [sqlalchemy.engine.Engine] [-] [raw sql] ()
+2025-05-18 12:25:48,885 INFO sqlalchemy.engine.Engine COMMIT
+2025-05-18 12:25:48,885 [INFO] [sqlalchemy.engine.Engine] [-] COMMIT
+2025-05-18 12:25:48,886 [INFO] [flashcamp.backend.database] [-] Database tables created successfully
+2025-05-18 12:25:48,886 [INFO] [flashcamp.backend.app.engines.ml] [-] Loading ML models from disk...
+2025-05-18 12:25:48,886 [WARNING] [flashcamp.backend.app.engines.ml] [-] Main model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/flashdna_main_v2.0.pkl, using random predictions
+2025-05-18 12:25:48,886 [WARNING] [flashcamp.backend.app.engines.ml] [-] Capital model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/capital_model_v2.0.pkl, using random predictions
+2025-05-18 12:25:48,886 [WARNING] [flashcamp.backend.app.engines.ml] [-] Advantage model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/advantage_model_v2.0.pkl, using random predictions
+2025-05-18 12:25:48,886 [WARNING] [flashcamp.backend.app.engines.ml] [-] Market model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/market_model_v2.0.pkl, using random predictions
+2025-05-18 12:25:48,886 [WARNING] [flashcamp.backend.app.engines.ml] [-] People model not found at /Users/sf/Desktop/FLASH/flashcamp/models/v2/people_model_v2.0.pkl, using random predictions
+2025-05-18 12:25:48,886 [INFO] [flashcamp.backend.app.engines.ml] [-] All models loaded successfully
+2025-05-18 12:25:48,886 [INFO] [flashcamp.backend.main] [-] FlashDNA API initialized in production mode
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11429]
+INFO:     Stopping reloader process [91698]

@@ -1,0 +1,11 @@
+global_threshold: 0.30          # existing default
+per_pillar:
+  Capital: 0.20               # retains current implicit penalty
+  Market:  0.20
+optional_strict_gate: 0.50    # 50 % cut-off if strict mode on
+boost:
+  - if: ["People>0.8", "Advantage>0.7"]
+    mult: 1.10
+penalty:
+  - if: ["Capital<0.2", "Market<0.2"]
+    mult: 0.70 
